@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coleção Noite - Onyx Bijuteria</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#071224,#0b1f3a);
+  color:white;
+  overflow-x:hidden;
+}
+/* partículas prateadas */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size:60px 60px;
+  animation:particlesMove 60s linear infinite;
+  pointer-events:none;
+  opacity:0.25;
+}
+@keyframes particlesMove{
+  from{transform:translateY(0)}
+  to{transform:translateY(-200px)}
+}
+header{
+  text-align:center;
+  padding:60px 20px;
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  letter-spacing:6px;
+  position:relative;
+}
+header::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:180px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,silver,transparent);
+  animation:shine 4s infinite;
+  transform:translateX(-50%);
+}
+@keyframes shine{
+  0%{opacity:0.2}
+  50%{opacity:1}
+  100%{opacity:0.2}
+}
+header p{font-size:16px;letter-spacing:2px;color:silver;}
+nav{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid rgba(192,192,192,0.3);
+  border-bottom:1px solid rgba(192,192,192,0.3);
+  backdrop-filter:blur(4px);
+}
+nav a{
+  color:silver;
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+nav a:hover{color:white;text-shadow:0 0 8px silver}
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{font-family:'Playfair Display',serif;color:silver;margin-bottom:30px;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  background:#0f2747;
+  padding:50px;
+  border-radius:20px;
+  text-align:center;
+  border:1px solid rgba(192,192,192,0.4);
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  transition:0.35s;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  left:-100%;
+  top:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.35),transparent);
+  transition:0.7s;
+}
+.card:hover::before{left:120%}
+.card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 0 20px rgba(200,200,200,0.4);
+}
+.card img{
+  width:30%;
+  height:250px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+button{
+  background:linear-gradient(45deg,#cfd2d6,#f2f2f2);
+  color:#0b1f3a;
+  border:none;
+  padding:10px 18px;
+  margin-top:10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+button:hover{
+  box-shadow:0 0 10px silver;
+  transform:translateY(-2px);
+}
+/* cantos cybersigilism */
+.corner{
+  position:fixed;
+  width:150px;
+  height:150px;
+  pointer-events:none;
+}
+.corner svg{
+  width:100%;
+  height:100%;
+  stroke:silver;
+  stroke-width:1.5;
+  fill:none;
+  filter:drop-shadow(0 0 6px silver);
+  animation:cornerGlow 6s ease-in-out infinite;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:60px;
+border-top:1px solid rgba(192,192,192,0.3);
+color:silver;
+}
+
+@keyframes cornerGlow{
+  0%{opacity:0.6;filter:drop-shadow(0 0 3px silver)}
+  50%{opacity:1;filter:drop-shadow(0 0 12px silver)}
+  100%{opacity:0.6;filter:drop-shadow(0 0 3px silver)}
+}
+.top-left{top:10px;left:10px}
+.top-right{top:10px;right:10px;transform:scaleX(-1)}
+.bottom-left{bottom:10px;left:10px;transform:scaleY(-1)}
+.bottom-right{bottom:10px;right:10px;transform:scale(-1)}
+#mouseCanvas{position:fixed;inset:0;pointer-events:none;z-index:0;}
+</style>
+</head>
+<body>
+
+<div class="corner top-left"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner top-right"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner bottom-left"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner bottom-right"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<canvas id="mouseCanvas"></canvas>
+
+<header>
+<a href="index.html"><img src="C:\Users\User\Desktop\Pap\img\Onyxbranco.png" width="150" height="200"></a>
+<p>Coleção Signature Onyx</p>
+</header>
+
+<nav>
+<a href="sobre.html">Sobre</a>
+<a href="colecao1.html">Coleção Signature Onyx</a>
+<a href="colecao2.html">Coleção Pink Onyx</a>
+<a href="personalizar.html">Personalizar</a>
+<a href="avaliacoes.html">Avaliações</a>
+</nav>
+
+<section>
+<h2>Peças da Coleção Signature Onyx</h2>
+<div class="grid">
+<div class="card"><img src="C:\Users\User\Desktop\Pap\img\CruzOnyx.jpg"><h3>Colar Cruz Onyx</h3><p></p>Uma peça que representa poder, proteção e identidade.
+Desenhada para quem valoriza o detalhe e a autenticidade.</p><p>15€</p><button>Adicionar ao carrinho</button></div>
+</div>
+</section>
+
+<footer>
+© 2026 Onyx - Bijuteria Artesanal
+</footer>
+
+<script>
+const canvas=document.getElementById('mouseCanvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resize();
+window.addEventListener('resize',resize);
+window.addEventListener('mousemove',(e)=>{
+for(let i=0;i<3;i++){
+particles.push({x:e.clientX,y:e.clientY,vx:(Math.random()-0.5)*1.5,vy:(Math.random()-0.5)*1.5,life:60});
+}});
+function animateParticles(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+for(let i=particles.length-1;i>=0;i--){
+let p=particles[i];
+p.x+=p.vx;p.y+=p.vy;p.life--;
+ctx.beginPath();
+ctx.arc(p.x,p.y,2,0,Math.PI*2);
+ctx.fillStyle='rgba(220,220,220,'+(p.life/60)+')';
+ctx.fill();
+if(p.life<=0){particles.splice(i,1);}
+}
+requestAnimationFrame(animateParticles);
+}
+animateParticles();
+</script>
+
+</body>
+</html>

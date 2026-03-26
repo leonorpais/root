@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre - Onyx Bijuteria</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#071224,#0b1f3a);
+  color:white;
+  overflow-x:hidden;
+}
+/* partículas prateadas */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size:60px 60px;
+  animation:particlesMove 60s linear infinite;
+  pointer-events:none;
+  opacity:0.25;
+}
+@keyframes particlesMove{
+  from{transform:translateY(0)}
+  to{transform:translateY(-200px)}
+}
+header{
+  text-align:center;
+  padding:60px 20px;
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  letter-spacing:6px;
+  position:relative;
+}
+header::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:180px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,silver,transparent);
+  animation:shine 4s infinite;
+  transform:translateX(-50%);
+}
+@keyframes shine{
+  0%{opacity:0.2}
+  50%{opacity:1}
+  100%{opacity:0.2}
+}
+header p{font-size:16px;letter-spacing:2px;color:silver;}
+nav{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid rgba(192,192,192,0.3);
+  border-bottom:1px solid rgba(192,192,192,0.3);
+  backdrop-filter:blur(4px);
+}
+nav a{
+  color:silver;
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+nav a:hover{color:white;text-shadow:0 0 8px silver}
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h2{font-family:'Playfair Display',serif;color:silver;margin-bottom:30px;}
+/* cantos cybersigilism */
+.corner{
+  position:fixed;
+  width:150px;
+  height:150px;
+  pointer-events:none;
+}
+.corner svg{
+  width:100%;
+  height:100%;
+  stroke:silver;
+  stroke-width:1.5;
+  fill:none;
+  filter:drop-shadow(0 0 6px silver);
+  animation:cornerGlow 6s ease-in-out infinite;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:60px;
+border-top:1px solid rgba(192,192,192,0.3);
+color:silver;
+}
+
+@keyframes cornerGlow{
+  0%{opacity:0.6;filter:drop-shadow(0 0 3px silver)}
+  50%{opacity:1;filter:drop-shadow(0 0 12px silver)}
+  100%{opacity:0.6;filter:drop-shadow(0 0 3px silver)}
+}
+.top-left{top:10px;left:10px}
+.top-right{top:10px;right:10px;transform:scaleX(-1)}
+.bottom-left{bottom:10px;left:10px;transform:scaleY(-1)}
+.bottom-right{bottom:10px;right:10px;transform:scale(-1)}
+#mouseCanvas{position:fixed;inset:0;pointer-events:none;z-index:0;}
+</style>
+</head>
+<body>
+
+<div class="corner top-left"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner top-right"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner bottom-left"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<div class="corner bottom-right"><svg viewBox="0 0 100 100"><path d="M5 95 L5 40 L20 25 L40 20 L60 10 L80 5"/><path d="M5 60 L30 60 L45 45 L60 45"/></svg></div>
+<canvas id="mouseCanvas"></canvas>
+
+<header>
+<a href="index.html"><img src="C:\Users\User\Desktop\Pap\img\Onyxbranco.png" width="150" height="200"></a>
+<p>Sobre a Empresa</p>
+</header>
+
+<nav>
+<a href="sobre.html">Sobre</a>
+<a href="colecao1.html">Coleção Signature Onyx</a>
+<a href="colecao2.html">Coleção Pink Onyx</a>
+<a href="personalizar.html">Personalizar</a>
+<a href="avaliacoes.html">Avaliações</a>
+</nav>
+
+<section>
+<h2>Sobre a Onyx</h2>
+<p>A Onyx nasceu da paixão pela criação de peças únicas que vão além de simples acessórios. Acreditamos que a bijuteria pode ser uma forma de expressão pessoal, capaz de refletir a identidade, as emoções e as histórias de quem a usa. Por isso, a nossa missão é criar peças artesanais que sejam tão especiais e únicas quanto cada pessoa.</p>
+
+<p>Cada peça da Onyx é pensada com atenção ao detalhe e produzida com cuidado, valorizando o trabalho artesanal e a criatividade. Utilizamos diferentes materiais, pedras e elementos decorativos que permitem criar combinações delicadas, elegantes e cheias de significado. O nosso objetivo é oferecer não apenas bijuteria, mas também experiências de criação, onde cada cliente pode participar no processo e personalizar a sua própria peça.</p>
+
+<p>Na Onyx, a personalização é parte essencial da marca. Acreditamos que cada pessoa deve poder escolher os detalhes que melhor representam o seu estilo e a sua personalidade. Desde a seleção de pedras e cores até pequenos símbolos ou charms, cada escolha transforma a peça num objeto verdadeiramente pessoal.</p>
+
+<p>Inspirada por um design minimalista e elegante, a Onyx procura criar acessórios intemporais que possam ser usados em diferentes momentos da vida. As nossas peças combinam simplicidade e sofisticação, permitindo que cada detalhe se destaque de forma subtil, mas marcante.</p>
+
+<p>Mais do que uma marca de bijuteria, a Onyx é um espaço de criatividade, expressão e identidade. Cada peça criada representa uma história, uma escolha e um momento especial.</p>
+
+</place><img src="C:\Users\User\Desktop\Pap\img\ChatGPT Image 7_03_2026, 15_25_37.png" width="310" height="450" >
+
+</section>
+
+<footer>
+© 2026 Onyx - Bijuteria Artesanal
+</footer>
+
+<script>
+const canvas=document.getElementById('mouseCanvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resize();
+window.addEventListener('resize',resize);
+window.addEventListener('mousemove',(e)=>{
+for(let i=0;i<3;i++){
+particles.push({x:e.clientX,y:e.clientY,vx:(Math.random()-0.5)*1.5,vy:(Math.random()-0.5)*1.5,life:60});
+}});
+function animateParticles(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+for(let i=particles.length-1;i>=0;i--){
+let p=particles[i];
+p.x+=p.vx;p.y+=p.vy;p.life--;
+ctx.beginPath();
+ctx.arc(p.x,p.y,2,0,Math.PI*2);
+ctx.fillStyle='rgba(220,220,220,'+(p.life/60)+')';
+ctx.fill();
+if(p.life<=0){particles.splice(i,1);}
+}
+requestAnimationFrame(animateParticles);
+}
+animateParticles();
+</script>
+
+</body>
+</html>
